@@ -1,4 +1,3 @@
-
 -- AstroUI provides the basis for configuring the AstroNvim User Interface
 -- Configuration documentation can be found with `:h astroui`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -17,7 +16,7 @@ return {
         -- Normal = { bg = "#000000" },
       },
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme
-          Normal = { bg = "#282828" },
+        Normal = { bg = "#000000" },
       },
     },
     -- Icons can be configured throughout the interface
