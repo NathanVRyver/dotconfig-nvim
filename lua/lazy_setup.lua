@@ -1,4 +1,3 @@
-
 require("lazy").setup({
   {
     "AstroNvim/AstroNvim",
@@ -17,18 +16,39 @@ require("lazy").setup({
   {
     "xiyaowong/nvim-transparent",
     config = function()
-      require("transparent").setup({
+      require("transparent").setup {
         extra_groups = { -- Makes specific groups transparent
-          "Normal", "NormalNC", "Comment", "Constant", "Special", "Identifier", "Statement", "PreProc", "Type", "Underlined", "Todo", "String", "Function", "Conditional", "Repeat", "Operator", "Structure", "LineNr", "NonText", "SignColumn", "CursorLineNr", "EndOfBuffer",
+          "Normal",
+          "NormalNC",
+          "Comment",
+          "Constant",
+          "Special",
+          "Identifier",
+          "Statement",
+          "PreProc",
+          "Type",
+          "Underlined",
+          "Todo",
+          "String",
+          "Function",
+          "Conditional",
+          "Repeat",
+          "Operator",
+          "Structure",
+          "LineNr",
+          "NonText",
+          "SignColumn",
+          "CursorLineNr",
+          "EndOfBuffer",
         },
-        exclude_groups = {"tree"}, -- Exclude specific groups from being transparent
-      })
-      vim.cmd("TransparentEnable") -- Enable transparency
+        exclude_groups = { "tree" }, -- Exclude specific groups from being transparent
+      }
+      vim.cmd "TransparentEnable" -- Enable transparency
     end,
   },
 }, {
   install = { colorscheme = { "astrodark", "habamax" } },
-  ui = { backdrop = 100 },
+  ui = { backdrop = 60 },
   performance = {
     rtp = {
       disabled_plugins = {
@@ -41,4 +61,3 @@ require("lazy").setup({
     },
   },
 })
-
