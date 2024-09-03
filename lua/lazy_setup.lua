@@ -48,7 +48,7 @@ require("lazy").setup({
   },
 }, {
   install = { colorscheme = { "astrodark", "habamax" } },
-  ui = { backdrop = 60 },
+  ui = { backdrop = 80 },
   performance = {
     rtp = {
       disabled_plugins = {
