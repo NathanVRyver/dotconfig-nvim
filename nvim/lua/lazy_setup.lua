@@ -11,13 +11,17 @@ require("lazy").setup({
       update_notifications = true,
     },
   },
+
   { import = "community" },
   { import = "plugins" },
+
   {
     "xiyaowong/nvim-transparent",
+    lazy = true, -- Lazy load this plugin
+    event = "VeryLazy", -- Load on specific event
     config = function()
       require("transparent").setup {
-        extra_groups = { -- Makes specific groups transparent
+        extra_groups = { -- Specify groups to make transparent
           "Normal",
           "NormalNC",
           "Comment",
@@ -43,12 +47,13 @@ require("lazy").setup({
         },
         exclude_groups = { "tree" }, -- Exclude specific groups from being transparent
       }
-      vim.cmd "TransparentEnable" -- Enable transparency
+      vim.api.nvim_command "TransparentEnable" -- Enable transparency using Lua API
     end,
   },
 }, {
+  -- Global Setup Options
   install = { colorscheme = { "astrodark", "habamax" } },
-  ui = { backdrop = 80 },
+  ui = { backdrop = 90 },
   performance = {
     rtp = {
       disabled_plugins = {
@@ -57,6 +62,8 @@ require("lazy").setup({
         "tarPlugin",
         "tohtml",
         "zipPlugin",
+        "man",
+        "matchit", -- Consider disabling these if not used
       },
     },
   },

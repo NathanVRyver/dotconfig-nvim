@@ -13,8 +13,6 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
 
-  -- == Examples of Overriding Plugins ==
-
   -- customize alpha options
   {
     "goolord/alpha-nvim",
