@@ -52,7 +52,7 @@ require("lazy").setup({
   },
 }, {
   -- Global Setup Options
-  install = { colorscheme = { "astrodark", "habamax" } },
+  install = { colorscheme = { "ellisonleao/gruvbox.nvim", "astrodark", "habamax", "" } },
   ui = { backdrop = 90 },
   performance = {
     rtp = {
